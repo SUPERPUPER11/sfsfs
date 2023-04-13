@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31016e69d14c41899a8a7fd9e6d24513" Name="Diagram1">
+        <EntityTypeShape EntityType="user17_PetrovModel.Active" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Country" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Jury" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Members" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Meropr" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Moderator" Width="1.5" PointX="6" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Napr" Width="1.5" PointX="3.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.Organization" Width="1.5" PointX="3" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user17_PetrovModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Jury" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Jury1" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Jury2" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Jury3" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Jury4" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Members" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Active_Moderator" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Jury_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Members_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Moderator_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Organization_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Moderator_Meropr" ManuallyRouted="false" />
+        <AssociationConnector Association="user17_PetrovModel.FK_Moderator_Napr" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

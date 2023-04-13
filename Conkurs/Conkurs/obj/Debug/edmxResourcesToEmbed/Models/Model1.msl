@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище user17_PetrovModelContainer" CdmEntityContainer="user17_PetrovEntities">
+    <EntitySetMapping Name="Active">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Active">
+        <MappingFragment StoreEntitySet="Active">
+          <ScalarProperty Name="Id_ak" ColumnName="Id_ak" />
+          <ScalarProperty Name="Name_meropr" ColumnName="Name_meropr" />
+          <ScalarProperty Name="Date_n" ColumnName="Date_n" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Name_active" ColumnName="Name_active" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Moderator_id" ColumnName="Moderator_id" />
+          <ScalarProperty Name="jury_id1" ColumnName="jury_id1" />
+          <ScalarProperty Name="jury_id2" ColumnName="jury_id2" />
+          <ScalarProperty Name="jury_id3" ColumnName="jury_id3" />
+          <ScalarProperty Name="jury_id4" ColumnName="jury_id4" />
+          <ScalarProperty Name="jury_id5" ColumnName="jury_id5" />
+          <ScalarProperty Name="id_pobed" ColumnName="id_pobed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Name_country" ColumnName="Name_country" />
+          <ScalarProperty Name="Name_Encountry" ColumnName="Name_Encountry" />
+          <ScalarProperty Name="Code1" ColumnName="Code1" />
+          <ScalarProperty Name="Code2" ColumnName="Code2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jury">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Jury">
+        <MappingFragment StoreEntitySet="Jury">
+          <ScalarProperty Name="Id_jury" ColumnName="Id_jury" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Pol" ColumnName="Pol" />
+          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
+          <ScalarProperty Name="Date_r" ColumnName="Date_r" />
+          <ScalarProperty Name="id_code1" ColumnName="id_code1" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Napr_id" ColumnName="Napr_id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Members">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="Id_Members" ColumnName="Id_Members" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
+          <ScalarProperty Name="Date_r" ColumnName="Date_r" />
+          <ScalarProperty Name="id_code1" ColumnName="id_code1" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Pol" ColumnName="Pol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meropr">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Meropr">
+        <MappingFragment StoreEntitySet="Meropr">
+          <ScalarProperty Name="Id_Meropr" ColumnName="Id_Meropr" />
+          <ScalarProperty Name="Name_Meropr" ColumnName="Name_Meropr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moderator">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Moderator">
+        <MappingFragment StoreEntitySet="Moderator">
+          <ScalarProperty Name="Id_moder" ColumnName="Id_moder" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Pol" ColumnName="Pol" />
+          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
+          <ScalarProperty Name="Date_r" ColumnName="Date_r" />
+          <ScalarProperty Name="id_code1" ColumnName="id_code1" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Napr_id" ColumnName="Napr_id" />
+          <ScalarProperty Name="Meropr_id" ColumnName="Meropr_id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Napr">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Napr">
+        <MappingFragment StoreEntitySet="Napr">
+          <ScalarProperty Name="Id_Napr" ColumnName="Id_Napr" />
+          <ScalarProperty Name="Naame_Napr" ColumnName="Naame_Napr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organization">
+      <EntityTypeMapping TypeName="user17_PetrovModel.Organization">
+        <MappingFragment StoreEntitySet="Organization">
+          <ScalarProperty Name="Id_Org" ColumnName="Id_Org" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
+          <ScalarProperty Name="Date_r" ColumnName="Date_r" />
+          <ScalarProperty Name="id_code1" ColumnName="id_code1" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Pol" ColumnName="Pol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="user17_PetrovModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище user17_PetrovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Active">
+    <Key>
+      <PropertyRef Name="Id_ak" />
+    </Key>
+    <Property Name="Id_ak" Type="int" Nullable="false" />
+    <Property Name="Name_meropr" Type="nvarchar(max)" />
+    <Property Name="Date_n" Type="nvarchar(max)" />
+    <Property Name="Dni" Type="int" />
+    <Property Name="Name_active" Type="nvarchar(max)" />
+    <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Moderator_id" Type="int" />
+    <Property Name="jury_id1" Type="int" />
+    <Property Name="jury_id2" Type="int" />
+    <Property Name="jury_id3" Type="int" />
+    <Property Name="jury_id4" Type="int" />
+    <Property Name="jury_id5" Type="int" />
+    <Property Name="id_pobed" Type="int" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Code2" />
+    </Key>
+    <Property Name="Name_country" Type="nvarchar(max)" />
+    <Property Name="Name_Encountry" Type="nvarchar(max)" />
+    <Property Name="Code1" Type="nvarchar(max)" />
+    <Property Name="Code2" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jury">
+    <Key>
+      <PropertyRef Name="Id_jury" />
+    </Key>
+    <Property Name="Id_jury" Type="int" Nullable="false" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Pol" Type="nvarchar(max)" />
+    <Property Name="Gmail" Type="nvarchar(max)" />
+    <Property Name="Date_r" Type="date" />
+    <Property Name="id_code1" Type="int" Nullable="false" />
+    <Property Name="Number" Type="nvarchar(max)" />
+    <Property Name="Napr_id" Type="int" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Id_Members" />
+    </Key>
+    <Property Name="Id_Members" Type="int" Nullable="false" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Gmail" Type="nvarchar(max)" />
+    <Property Name="Date_r" Type="date" />
+    <Property Name="id_code1" Type="int" />
+    <Property Name="Number" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Pol" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Meropr">
+    <Key>
+      <PropertyRef Name="Id_Meropr" />
+    </Key>
+    <Property Name="Id_Meropr" Type="int" Nullable="false" />
+    <Property Name="Name_Meropr" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Moderator">
+    <Key>
+      <PropertyRef Name="Id_moder" />
+    </Key>
+    <Property Name="Id_moder" Type="int" Nullable="false" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Pol" Type="nvarchar(max)" />
+    <Property Name="Gmail" Type="nvarchar(max)" />
+    <Property Name="Date_r" Type="date" />
+    <Property Name="id_code1" Type="int" />
+    <Property Name="Number" Type="nvarchar(max)" />
+    <Property Name="Napr_id" Type="int" />
+    <Property Name="Meropr_id" Type="int" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Napr">
+    <Key>
+      <PropertyRef Name="Id_Napr" />
+    </Key>
+    <Property Name="Id_Napr" Type="int" Nullable="false" />
+    <Property Name="Naame_Napr" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="Id_Org" />
+    </Key>
+    <Property Name="Id_Org" Type="int" Nullable="false" />
+    <Property Name="FIO" Type="nvarchar(max)" />
+    <Property Name="Gmail" Type="nvarchar(max)" />
+    <Property Name="Date_r" Type="date" />
+    <Property Name="id_code1" Type="int" />
+    <Property Name="Number" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Pol" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Active_Jury">
+    <End Role="Jury" Type="Self.Jury" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jury">
+        <PropertyRef Name="Id_jury" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="jury_id1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Active_Jury1">
+    <End Role="Jury" Type="Self.Jury" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jury">
+        <PropertyRef Name="Id_jury" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="jury_id2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Active_Jury2">
+    <End Role="Jury" Type="Self.Jury" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jury">
+        <PropertyRef Name="Id_jury" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="jury_id3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Active_Jury3">
+    <End Role="Jury" Type="Self.Jury" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jury">
+        <PropertyRef Name="Id_jury" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="jury_id4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Active_Jury4">
+    <End Role="Jury" Type="Self.Jury" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jury">
+        <PropertyRef Name="Id_jury" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="jury_id5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Active_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="Id_Members" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="id_pobed" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Active_Moderator">
+    <End Role="Moderator" Type="Self.Moderator" Multiplicity="0..1" />
+    <End Role="Active" Type="Self.Active" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moderator">
+        <PropertyRef Name="Id_moder" />
+      </Principal>
+      <Dependent Role="Active">
+        <PropertyRef Name="Moderator_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jury_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Jury" Type="Self.Jury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Code2" />
+      </Principal>
+      <Dependent Role="Jury">
+        <PropertyRef Name="id_code1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Code2" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="id_code1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moderator_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Moderator" Type="Self.Moderator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Code2" />
+      </Principal>
+      <Dependent Role="Moderator">
+        <PropertyRef Name="id_code1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moderator_Meropr">
+    <End Role="Meropr" Type="Self.Meropr" Multiplicity="0..1" />
+    <End Role="Moderator" Type="Self.Moderator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meropr">
+        <PropertyRef Name="Id_Meropr" />
+      </Principal>
+      <Dependent Role="Moderator">
+        <PropertyRef Name="Meropr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moderator_Napr">
+    <End Role="Napr" Type="Self.Napr" Multiplicity="0..1" />
+    <End Role="Moderator" Type="Self.Moderator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Napr">
+        <PropertyRef Name="Id_Napr" />
+      </Principal>
+      <Dependent Role="Moderator">
+        <PropertyRef Name="Napr_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organization_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Organization" Type="Self.Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Code2" />
+      </Principal>
+      <Dependent Role="Organization">
+        <PropertyRef Name="id_code1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище user17_PetrovModelContainer">
+    <EntitySet Name="Active" EntityType="Self.Active" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jury" EntityType="Self.Jury" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meropr" EntityType="Self.Meropr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Moderator" EntityType="Self.Moderator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Napr" EntityType="Self.Napr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organization" EntityType="Self.Organization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Active_Jury" Association="Self.FK_Active_Jury">
+      <End Role="Jury" EntitySet="Jury" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Active_Jury1" Association="Self.FK_Active_Jury1">
+      <End Role="Jury" EntitySet="Jury" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Active_Jury2" Association="Self.FK_Active_Jury2">
+      <End Role="Jury" EntitySet="Jury" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Active_Jury3" Association="Self.FK_Active_Jury3">
+      <End Role="Jury" EntitySet="Jury" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Active_Jury4" Association="Self.FK_Active_Jury4">
+      <End Role="Jury" EntitySet="Jury" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Active_Members" Association="Self.FK_Active_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Active_Moderator" Association="Self.FK_Active_Moderator">
+      <End Role="Moderator" EntitySet="Moderator" />
+      <End Role="Active" EntitySet="Active" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jury_Country" Association="Self.FK_Jury_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Jury" EntitySet="Jury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Country" Association="Self.FK_Members_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moderator_Country" Association="Self.FK_Moderator_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Moderator" EntitySet="Moderator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moderator_Meropr" Association="Self.FK_Moderator_Meropr">
+      <End Role="Meropr" EntitySet="Meropr" />
+      <End Role="Moderator" EntitySet="Moderator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moderator_Napr" Association="Self.FK_Moderator_Napr">
+      <End Role="Napr" EntitySet="Napr" />
+      <End Role="Moderator" EntitySet="Moderator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organization_Country" Association="Self.FK_Organization_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Organization" EntitySet="Organization" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
